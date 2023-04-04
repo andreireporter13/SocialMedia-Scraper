@@ -5,10 +5,8 @@
 
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
-
-from fake_useragent import UserAgent
-
-
+#
+#
 def configured_driver(): 
     """ This function configure webdriver! """
 
@@ -19,7 +17,7 @@ def configured_driver():
     #options.add_argument('-headless')
 
     # set random user Agent
-    options.set_preference("general.useragent.override", UserAgent().random) 
+    options.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:111.0) Gecko/20100101 Firefox/111.0") 
 
     # disable notifications from site, but not popups
     # options.add_argument("--disable-notifications")
