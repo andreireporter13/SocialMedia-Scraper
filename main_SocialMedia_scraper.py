@@ -38,6 +38,14 @@ def get_acces_to_facebook(driver) -> None:
     This func() get acces to facebook with login and password.
     """
     
+    #####################################################
+    # It is mentioned that clicking on the Facebook cookies 
+    # based on their ID 
+    # is difficult because they frequently change. 
+    # I haven't searched for the class and other details. 
+    # Therefore, I have searched for all buttons that contain 
+    # the text "Allow essential and optional cookies".
+    #
     # find cookies button by regex
     regex_data = re.compile(r"^Allow\s(?:essential\s)?and\s(?:optional\s)?cookies$")
 
@@ -52,7 +60,13 @@ def get_acces_to_facebook(driver) -> None:
                 sleep(0.5)
 
                 break
-    
+
+    #######################################################
+    # Will come back with an update after 
+    # researching more on the subject. 
+    # Be careful not to get caught by 
+    # Facebook for using bots.
+    #######################################################
     #            
     except Exception as ex:
         print(ex)
